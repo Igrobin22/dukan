@@ -170,10 +170,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       hintStyle: TextStyle(color: Colors.black54),
                     ),
                   ),
-                  SizedBox(height: 10.0,),
+                  SizedBox(
+                    height: 10.0,
+                  ),
                   Container(
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.0),color: Color(0xffC0E862)),
-
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20.0),
+                        color: Color(0xffC0E862)),
                   )
                 ],
               ),

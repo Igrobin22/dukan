@@ -1,21 +1,29 @@
-import 'package:dukan/Screens/home_screen.dart';
+import 'package:dukan/view/home_screen.dart';
 import 'package:flutter/material.dart';
-import 'Screens/signup_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
-void main(){
-  runApp(Main());
+void main() {
+  runApp(const Main());
 }
+
 class Main extends StatelessWidget {
   const Main({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      routes: {
-        '/' : (context)=> HomeScreen(),
-      },
-    );
+    return ScreenUtilInit(
+        designSize: const Size(360, 800),
+        builder: (context,child){
+      return GetMaterialApp(
+        home: const HomeScreen(),
+        theme: ThemeData(
+          useMaterial3: true,
+          primaryColor: Colors.white,
+
+        ),
+        debugShowCheckedModeBanner: false,
+      );
+    });
   }
 }
